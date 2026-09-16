@@ -91,7 +91,7 @@ public class RebateService : IRebateService
         if (result.Success)
         {
             var storeRebateDataStore = new RebateDataStore();
-            storeRebateDataStore.StoreCalculationResult(rebate, rebateAmount);
+            storeRebateDataStore.StoreCalculationResult(rebate, product, request.Volume, rebateAmount);
         }
 
         return result;

@@ -1,12 +1,19 @@
-﻿using Smartwyre.DeveloperTest.Types;
+using Smartwyre.DeveloperTest.Types;
 
 namespace Smartwyre.DeveloperTest.Data;
 
-public class ProductDataStore
+public class ProductDataStore : IProductDataStore
 {
+    private static readonly Dictionary<string, Product> SampleProducts = new(StringComparer.OrdinalIgnoreCase)
+    {
+        ["soy"] = new Product { Id = 1, Identifier = "soy", Price = 400m, Uom = "ton", SupportedIncentives = SupportedIncentiveType.FixedCashAmount | SupportedIncentiveType.FixedRateRebate | SupportedIncentiveType.AmountPerUom },
+        ["rice"] = new Product { Id = 2, Identifier = "rice", Price = 350m, Uom = "ton", SupportedIncentives = SupportedIncentiveType.FixedCashAmount },
+        ["corn"] = new Product { Id = 3, Identifier = "corn", Price = 200m, Uom = "ton", SupportedIncentives = SupportedIncentiveType.FixedRateRebate | SupportedIncentiveType.AmountPerUom },
+    };
+
     public Product GetProduct(string productIdentifier)
     {
-        // Access database to retrieve account, code removed for brevity 
-        return new Product();
+        // Sample data for this exercise. A real implementation would query a database.
+        return SampleProducts.GetValueOrDefault(productIdentifier);
     }
 }

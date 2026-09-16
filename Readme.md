@@ -34,12 +34,14 @@
 ## Assumptions
 
 - Negative `volume` is treated as invalid input. Original code only checked for zero.
+- Runner loops instead of exiting after one calculation. Exercise doesn't specify either way.
 
 ## Plan
 
 1. Remove empty test (`PaymentService`), add missing project references, fix launch.json, enable ImplicitUsings.
 
 2. Extract data store interfaces, add sample data in memory, test.
+   RebateCalculation now has a full audit trail.
 
 3. Extract one calculator class per `incentive type`, test each.
 
