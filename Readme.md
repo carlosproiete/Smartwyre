@@ -1,26 +1,34 @@
 # Smartwyre Developer Test
 
+[![CI](https://github.com/carlosproiete/Smartwyre/actions/workflows/ci.yml/badge.svg)](https://github.com/carlosproiete/Smartwyre/actions/workflows/ci.yml)
+
 [Jump to the original instructions](#original-exercise-instructions)
+
+## How to run
+
+    dotnet run --project Smartwyre.DeveloperTest.Runner
+
+Available rebates: `cash`, `rate`, `uom`
+Available products: `soy`, `rice`, `corn`
+
+Type `exit` at the rebate prompt to quit.
 
 ## Definition of Done
 
-- [ ] Solution builds
-- [ ] All existing tests pass (`dotnet test`)
-- [ ] Adding a new `incentive type` without modifying `RebateService`
-- [ ] Runner executes end-to-end with real input
-- [ ] Invalid input is handled gracefully without crashing
-- [ ] No raw stack traces or internal details are leaking
-- [ ] Errors are logged with context for troubleshooting
+- [x] Solution builds
+- [x] All existing tests pass (`dotnet test`)
+- [x] Adding a new `incentive type` without modifying `RebateService`
+- [x] Runner executes end-to-end with real input
+- [x] Invalid input is handled gracefully without crashing
+- [x] No raw stack traces or internal details are leaking
 - [ ] Two new incentive types are implemented
-- [ ] One end-to-end integration test covers the runner with real input
 
 ## Not requested, nice to have
 
-- [ ] Build badge at the top of this README
-- [ ] Smoke test covering the main execution path
-- [ ] GitHub Actions workflow running `dotnet build`, `dotnet test` on every push and pull requests
-- [ ] `dotnet list package --vulnerable` as a workflow step
-- [ ] XML doc comments on the public interfaces
+- [x] Build badge at the top of this README
+- [x] Smoke test covering the main execution path
+- [x] GitHub Actions workflow running `dotnet build`, `dotnet test` on every push and pull requests
+- [x] `dotnet list package --vulnerable` as a workflow step
 
 ## Refactor needed
 
@@ -34,12 +42,14 @@
 ## Assumptions
 
 - Negative `volume` is treated as invalid input. Original code only checked for zero.
+- Runner loops instead of exiting after one calculation. Exercise doesn't specify either way.
 
 ## Plan
 
 1. Remove empty test (`PaymentService`), add missing project references, fix launch.json, enable ImplicitUsings.
 
 2. Extract data store interfaces, add sample data in memory, test.
+   RebateCalculation now has a full audit trail.
 
 3. Extract one calculator class per `incentive type`, test each.
 
