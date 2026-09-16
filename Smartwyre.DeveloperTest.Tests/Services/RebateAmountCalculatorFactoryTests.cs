@@ -24,4 +24,14 @@ public class RebateAmountCalculatorFactoryTests
     {
         Assert.Throws<ArgumentOutOfRangeException>(() => _factory.GetCalculator((IncentiveType)999));
     }
+
+    [Fact]
+    public void GetCalculator_EveryIncentiveType_HasARegisteredCalculator()
+    {
+        foreach (var incentiveType in Enum.GetValues<IncentiveType>())
+        {
+            var calculator = _factory.GetCalculator(incentiveType);
+            Assert.NotNull(calculator);
+        }
+    }
 }
