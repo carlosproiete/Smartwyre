@@ -45,7 +45,7 @@ class Program
                 var result = rebateService.Calculate(request);
 
                 Console.WriteLine(result.Success
-                    ? $"Success. Calculated amount: {result.CalculatedAmount}"
+                    ? $"Success. Calculated amount: {result.CalculatedAmount:F2}"
                     : $"Failed: {result.Reason}");
             }
             catch (Exception ex)
