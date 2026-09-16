@@ -1,5 +1,7 @@
 # Smartwyre Developer Test
 
+[![CI](https://github.com/carlosproiete/Smartwyre/actions/workflows/ci.yml/badge.svg)](https://github.com/carlosproiete/Smartwyre/actions/workflows/ci.yml)
+
 [Jump to the original instructions](#original-exercise-instructions)
 
 ## How to run
@@ -23,11 +25,10 @@ Type `exit` at the rebate prompt to quit.
 
 ## Not requested, nice to have
 
-- [ ] Build badge at the top of this README
-- [ ] Smoke test covering the main execution path
-- [ ] GitHub Actions workflow running `dotnet build`, `dotnet test` on every push and pull requests
-- [ ] `dotnet list package --vulnerable` as a workflow step
-- [ ] XML doc comments on the public interfaces
+- [x] Build badge at the top of this README
+- [x] Smoke test covering the main execution path
+- [x] GitHub Actions workflow running `dotnet build`, `dotnet test` on every push and pull requests
+- [x] `dotnet list package --vulnerable` as a workflow step
 
 ## Refactor needed
 
