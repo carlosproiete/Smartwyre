@@ -2,6 +2,15 @@
 
 [Jump to the original instructions](#original-exercise-instructions)
 
+## How to run
+
+    dotnet run --project Smartwyre.DeveloperTest.Runner
+
+Available rebates: `cash`, `rate`, `uom`
+Available products: `soy`, `rice`, `corn`
+
+Type `exit` at the rebate prompt to quit.
+
 ## Definition of Done
 
 - [ ] Solution builds
