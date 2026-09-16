@@ -12,6 +12,8 @@ public class RebateAmountCalculatorFactoryTests
     [InlineData(IncentiveType.FixedCashAmount, typeof(FixedCashAmountCalculator))]
     [InlineData(IncentiveType.FixedRateRebate, typeof(FixedRateRebateCalculator))]
     [InlineData(IncentiveType.AmountPerUom, typeof(AmountPerUomCalculator))]
+    [InlineData(IncentiveType.SeasonalRebate, typeof(SeasonalRebateCalculator))]
+    [InlineData(IncentiveType.FortuneRebate, typeof(FortuneRebateCalculator))]
     public void GetCalculator_KnownIncentiveType_ReturnsMatchingCalculator(IncentiveType incentiveType, Type expectedType)
     {
         var calculator = _factory.GetCalculator(incentiveType);

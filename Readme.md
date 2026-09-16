@@ -8,7 +8,7 @@
 
     dotnet run --project Smartwyre.DeveloperTest.Runner
 
-Available rebates: `cash`, `rate`, `uom`
+Available rebates: `cash`, `rate`, `uom`, `season`, `fortune`
 Available products: `soy`, `rice`, `corn`
 
 Type `exit` at the rebate prompt to quit.
@@ -21,7 +21,7 @@ Type `exit` at the rebate prompt to quit.
 - [x] Runner executes end-to-end with real input
 - [x] Invalid input is handled gracefully without crashing
 - [x] No raw stack traces or internal details are leaking
-- [ ] Two new incentive types are implemented
+- [x] Two new incentive types are implemented
 
 ## Not requested, nice to have
 
@@ -71,6 +71,8 @@ flowchart TD
     E --> F[FixedCashAmountCalculator]
     E --> G[FixedRateRebateCalculator]
     E --> H[AmountPerUomCalculator]
+    E --> I[SeasonalRebateCalculator]
+    E --> J[FortuneRebateCalculator]
 ```
 
 ## Adding a new incentive type

@@ -4,5 +4,7 @@ public enum IncentiveType
 {
     FixedRateRebate,
     AmountPerUom,
-    FixedCashAmount
+    FixedCashAmount,
+    SeasonalRebate,
+    FortuneRebate
 }
