@@ -9,6 +9,8 @@ public class RebateDataStore : IRebateDataStore
         ["cash"] = new Rebate { Identifier = "cash", Incentive = IncentiveType.FixedCashAmount, Amount = 50m },
         ["rate"] = new Rebate { Identifier = "rate", Incentive = IncentiveType.FixedRateRebate, Percentage = 0.05m },
         ["uom"] = new Rebate { Identifier = "uom", Incentive = IncentiveType.AmountPerUom, Amount = 2m },
+        ["season"] = new Rebate { Identifier = "season", Incentive = IncentiveType.SeasonalRebate, Percentage = 0.05m },
+        ["fortune"] = new Rebate { Identifier = "fortune", Incentive = IncentiveType.FortuneRebate, Amount = 100m },
     };
 
     public List<RebateCalculation> StoredCalculations { get; } = new();

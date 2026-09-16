@@ -9,6 +9,8 @@ public class RebateAmountCalculatorFactory : IRebateAmountCalculatorFactory
         IncentiveType.FixedCashAmount => new FixedCashAmountCalculator(),
         IncentiveType.FixedRateRebate => new FixedRateRebateCalculator(),
         IncentiveType.AmountPerUom => new AmountPerUomCalculator(),
+        IncentiveType.SeasonalRebate => new SeasonalRebateCalculator(TimeProvider.System),
+        IncentiveType.FortuneRebate => new FortuneRebateCalculator(Random.Shared),
         _ => throw new ArgumentOutOfRangeException(nameof(incentiveType), incentiveType, "No calculator registered for this incentive type."),
     };
 }
