@@ -13,15 +13,13 @@ Type `exit` at the rebate prompt to quit.
 
 ## Definition of Done
 
-- [ ] Solution builds
-- [ ] All existing tests pass (`dotnet test`)
-- [ ] Adding a new `incentive type` without modifying `RebateService`
-- [ ] Runner executes end-to-end with real input
-- [ ] Invalid input is handled gracefully without crashing
-- [ ] No raw stack traces or internal details are leaking
-- [ ] Errors are logged with context for troubleshooting
+- [x] Solution builds
+- [x] All existing tests pass (`dotnet test`)
+- [x] Adding a new `incentive type` without modifying `RebateService`
+- [x] Runner executes end-to-end with real input
+- [x] Invalid input is handled gracefully without crashing
+- [x] No raw stack traces or internal details are leaking
 - [ ] Two new incentive types are implemented
-- [ ] One end-to-end integration test covers the runner with real input
 
 ## Not requested, nice to have
 
