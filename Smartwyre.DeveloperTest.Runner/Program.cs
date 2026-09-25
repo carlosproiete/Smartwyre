@@ -23,6 +23,13 @@ class Program
             Console.Write("Product identifier: ");
             var productIdentifier = Console.ReadLine();
 
+            if (productIdentifier is null)
+            {
+                Console.WriteLine("Product identifier is required.");
+                Console.WriteLine();
+                continue;
+            }
+
             Console.Write("Volume: ");
             var volumeInput = Console.ReadLine();
 
@@ -50,7 +57,7 @@ class Program
             }
             catch (Exception ex)
             {
-                Console.Error.WriteLine(ex);
+                Console.Error.WriteLine($"{DateTimeOffset.UtcNow:O} rebate={rebateIdentifier} product={productIdentifier} volume={volumeInput}: {ex}");
                 Console.WriteLine("Something went wrong calculating the rebate.");
             }
 

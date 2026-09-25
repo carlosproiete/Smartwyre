@@ -5,6 +5,6 @@ namespace Smartwyre.DeveloperTest.Services;
 public class RebateAmountCalculationResult
 {
     public bool Success { get; set; }
-    public string Reason { get; set; }
+    public string Reason { get; set; } = string.Empty;
     public decimal CalculatedAmount { get; set; }
 }

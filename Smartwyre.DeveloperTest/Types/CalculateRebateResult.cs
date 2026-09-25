@@ -3,6 +3,6 @@
 public class CalculateRebateResult
 {
     public bool Success { get; set; }
-    public string Reason { get; set; }
+    public string Reason { get; set; } = string.Empty;
     public decimal CalculatedAmount { get; set; }
 }

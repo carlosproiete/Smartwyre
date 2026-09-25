@@ -11,7 +11,7 @@ public class ProductDataStore : IProductDataStore
         ["corn"] = new Product { Id = 3, Identifier = "corn", Price = 200m, Uom = "ton", SupportedIncentives = SupportedIncentiveType.FixedRateRebate | SupportedIncentiveType.AmountPerUom },
     };
 
-    public Product GetProduct(string productIdentifier)
+    public Product? GetProduct(string productIdentifier)
     {
         // Sample data for this exercise. A real implementation would query a database.
         return SampleProducts.GetValueOrDefault(productIdentifier);

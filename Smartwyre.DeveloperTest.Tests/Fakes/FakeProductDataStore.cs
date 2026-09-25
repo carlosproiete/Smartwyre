@@ -5,7 +5,7 @@ namespace Smartwyre.DeveloperTest.Tests.Fakes;
 
 public class FakeProductDataStore : IProductDataStore
 {
-    public Product ProductToReturn { get; set; }
+    public Product? ProductToReturn { get; set; }
 
-    public Product GetProduct(string productIdentifier) => ProductToReturn;
+    public Product? GetProduct(string productIdentifier) => ProductToReturn;
 }

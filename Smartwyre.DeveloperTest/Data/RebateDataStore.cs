@@ -15,7 +15,7 @@ public class RebateDataStore : IRebateDataStore
 
     public List<RebateCalculation> StoredCalculations { get; } = new();
 
-    public Rebate GetRebate(string rebateIdentifier)
+    public Rebate? GetRebate(string rebateIdentifier)
     {
         // Sample data for this exercise. A real implementation would query a database.
         return SampleRebates.GetValueOrDefault(rebateIdentifier);

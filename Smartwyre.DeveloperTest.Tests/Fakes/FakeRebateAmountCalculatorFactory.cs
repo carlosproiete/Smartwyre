@@ -5,7 +5,7 @@ namespace Smartwyre.DeveloperTest.Tests.Fakes;
 
 public class FakeRebateAmountCalculatorFactory : IRebateAmountCalculatorFactory
 {
-    public RebateAmountCalculationResult ResultToReturn { get; set; }
+    public RebateAmountCalculationResult ResultToReturn { get; set; } = new();
 
     public IRebateAmountCalculator GetCalculator(IncentiveType incentiveType) => new FakeCalculator(ResultToReturn);
 
